@@ -25,13 +25,14 @@ for(let i = 0; i < 100; i++){
     let color;
     box += ` <div class="box">${i + 1}</div>`;
     if ( i % 3 === 0) {
-        color = "green";
+        box.setAttribute("class", "green");
     }
     else if ( i % 5 === 0) {
-        color = "yellow";
+        box.setAttribute("class", "red");
     }
-    else if ( i % 5 === 9 && i % 3 === 0)
-    color = "red";
+    else if ( i % 5 === 9 && i % 3 === 0){
+      box.setAttribute("class", "yellow");
+    }
 };
 
 squareWrapper.innerHTML = box;
