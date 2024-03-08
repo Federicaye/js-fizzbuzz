@@ -17,7 +17,7 @@ Buon lavoro e buon divertimento! :faccia_leggermente_sorridente: */
 
 const squareWrapper = document.createElement('div');
 squareWrapper.className = 'd-flex justify-content-between align-content-center flex-wrap blue';
-squareWrapper.setAttribute('id', 'boxes');
+squareWrapper.setAttribute('id', boxes);
 
 /* let box = document.createElement('div');
 box.setAttribute("class", "box"); */
@@ -27,30 +27,31 @@ for (let i = 0; i < 100; i++) {
     let color;
     let text;
     let box = document.createElement('div');
-    box.setAttribute("class", "box");
-    box.setAttribute("class", "color");
+    box.setAttribute("class", box);
+    box.setAttribute("class", color);
     /* box += ` <div class="box color">${i + 1}</div>`; */
     /*   box.setAttribute("class", "color");  */
     if (i % 3 === 0) {
-        color = "green";
+        color = green;
         text = "Fizz";
     }
     else if (i % 5 === 0) {
-        color = "red";
+        color = red;
         text = "Buzz";
     }
     else if (i % 5 === 9 && i % 3 === 0) {
-        color = "yellow";
+        color = yellow;
         text = "FizzBuzz";
     }
     else {
         text = i;
     }
     squareWrapper.appendChild(box);
+    box.innerHTML = text;
 };
 
 /* box.setAttribute("class", "color"); */
-box.innerHTML = text;
+
 
 /* squareWrapper.innerHTML = box;
  */
