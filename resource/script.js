@@ -19,8 +19,8 @@ const squareWrapper = document.createElement('div');
 squareWrapper.className = 'd-flex justify-content-between align-content-center flex-wrap blue';
 squareWrapper.setAttribute('id', 'boxes');
 
-let box = document.createElement('div');
-box.setAttribute("class", "box");
+/* let box = document.createElement('div');
+box.setAttribute("class", "box"); */
 
 
 for (let i = 0; i < 100; i++) {
@@ -28,6 +28,7 @@ for (let i = 0; i < 100; i++) {
     let text;
     let box = document.createElement('div');
     box.setAttribute("class", "box");
+    box.setAttribute("class", "color");
     /* box += ` <div class="box color">${i + 1}</div>`; */
     /*   box.setAttribute("class", "color");  */
     if (i % 3 === 0) {
@@ -45,14 +46,14 @@ for (let i = 0; i < 100; i++) {
     else {
         text = i;
     }
-
+    squareWrapper.appendChild(box);
 };
 
-box.setAttribute("class", "color");
+/* box.setAttribute("class", "color"); */
 box.innerHTML = text;
 
-squareWrapper.innerHTML = box;
-
+/* squareWrapper.innerHTML = box;
+ */
 const container = document.querySelector('.container');
 container.append(squareWrapper);
 
