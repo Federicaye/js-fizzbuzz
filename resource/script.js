@@ -19,24 +19,40 @@ const squareWrapper = document.createElement('div');
 squareWrapper.className = 'd-flex justify-content-between align-content-center flex-wrap blue';
 squareWrapper.setAttribute('id', 'boxes');
 
-let box = "";
+let box = document.createElement('div');
+box.setAttribute("class", "box");
+
 
 for (let i = 0; i < 100; i++) {
     let color;
-    box += ` <div class="box">${i + 1}</div>`;
-    box.setAttribute("class", "color");
+    let text;
+    let box = document.createElement('div');
+    box.setAttribute("class", "box");
+    /* box += ` <div class="box color">${i + 1}</div>`; */
+    /*   box.setAttribute("class", "color");  */
     if (i % 3 === 0) {
         color = "green";
+        text = "Fizz";
     }
     else if (i % 5 === 0) {
         color = "red";
+        text = "Buzz";
     }
     else if (i % 5 === 9 && i % 3 === 0) {
         color = "yellow";
+        text = "FizzBuzz";
     }
+    else {
+        text = i;
+    }
+
 };
+
+box.setAttribute("class", "color");
+box.innerHTML = text;
 
 squareWrapper.innerHTML = box;
 
 const container = document.querySelector('.container');
 container.append(squareWrapper);
+
