@@ -9,20 +9,20 @@
 	margin:5px;
 }
 
+#container {
+    width: 1000px;
+    margin: 0 auto;
+}
 
-
-.blue {
+.fizzbuzz {
     background-color: blue;
 }
 
-.green {
+.fizz{
     background-color: green;
 }
 
-.yellow {
+.buzz {
     background-color: yellow;
 }
 
-.red {
-    background-color: red;
-}

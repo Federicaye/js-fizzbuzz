@@ -15,23 +15,23 @@ Applica stili differenti agli elementi aggiunti al DOM nel BONUS 1, a seconda ch
 Se sei a corto di idee per lo stile, potresti prendere spunto dallo screenshot fornito in consegna.
 Buon lavoro e buon divertimento! :faccia_leggermente_sorridente: */
 
-const squareWrapper = document.createElement('div');
+/* const squareWrapper = document.createElement('div');
 squareWrapper.className = 'd-flex justify-content-between align-content-center flex-wrap blue';
-squareWrapper.setAttribute('id', boxes);
+/* squareWrapper.setAttribute('id', boxes); */
 
 /* let box = document.createElement('div');
 box.setAttribute("class", "box"); */
-
+/* let color;
+let text;
 
 for (let i = 0; i < 100; i++) {
-    let color;
-    let text;
+
     let box = document.createElement('div');
     box.setAttribute("class", box);
-    box.setAttribute("class", color);
+    box.setAttribute("class", color); */
     /* box += ` <div class="box color">${i + 1}</div>`; */
     /*   box.setAttribute("class", "color");  */
-    if (i % 3 === 0) {
+   /*  if (i % 5 === 0 && i % 3 === 0) {
         color = green;
         text = "Fizz";
     }
@@ -39,7 +39,7 @@ for (let i = 0; i < 100; i++) {
         color = red;
         text = "Buzz";
     }
-    else if (i % 5 === 9 && i % 3 === 0) {
+    else if (i % 3 === 0) {
         color = yellow;
         text = "FizzBuzz";
     }
@@ -48,13 +48,37 @@ for (let i = 0; i < 100; i++) {
     }
     squareWrapper.appendChild(box);
     box.innerHTML = text;
-};
 
-/* box.setAttribute("class", "color"); */
+}; */
+
+/* box.setAttribute("class", color); */
 
 
 /* squareWrapper.innerHTML = box;
  */
-const container = document.querySelector('.container');
+/* const container = document.querySelector('.container');
 container.append(squareWrapper);
 
+  */
+
+let container = document.getElementById('container');
+for (let i = 1; i <= 100; i++) {
+    let element = document.createElement('div');
+    let text = '';
+
+    if (i % 3 === 0 && i % 5 === 0) {
+        element.classList.add('fizzbuzz');
+        text = "FizzBuzz";
+    } else if (i % 3 === 0) {
+        element.classList.add('fizz');
+        text = "Fizz";
+    } else if (i % 5 === 0) {
+        element.classList.add('buzz');
+        text = "Buzz";
+    } else {
+        text = i;
+    }
+    element.classList.add('box');
+    element.textContent = text;
+    container.appendChild(element);
+}
